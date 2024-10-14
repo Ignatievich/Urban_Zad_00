@@ -41,6 +41,8 @@ def get_multiplied_digits( number ) :
     if len( str_number ) > 0 :
         first = int( str_number[0] )
         str_number = str_number[1:]
+    if first == 0 :
+        first = 1
     if len( str_number ) > 0 :
         result = first * get_multiplied_digits( int( str_number ) )
     else :
@@ -52,5 +54,8 @@ Number = 40203
 multiplied_digits = get_multiplied_digits( Number )
 print(  'Number =', Number, '   Multiplied digits =', multiplied_digits )
 
+Number = 402030
+multiplied_digits = get_multiplied_digits( Number )
+print(  'Number =', Number, '   Multiplied digits =', multiplied_digits )
 
 
